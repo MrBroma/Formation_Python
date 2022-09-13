@@ -27,3 +27,9 @@ d.keys()
 # Obtenir les valeurs
 d.values()
 
+# Obtenir à la fois les clés et valeurs --> forme Tuple
+d.items()
+
+for cle, valeur in d.items():
+  print(cle, valeur)
+

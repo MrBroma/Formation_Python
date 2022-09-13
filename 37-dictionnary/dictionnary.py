@@ -1,29 +1,29 @@
-dictionnary = {"prenom": "Paul",
+d = {"prenom": "Paul",
 "profession": "ingénieur"}
 
 
-key = dictionnary.get("prenom", "La clé prénom n'existe pas")
+key = d.get("prenom", "La clé prénom n'existe pas")
 print(key)
 
 # Modifier la valeur associée à une clé
 
-dictionnary["prenom"] = "Julie"
+d["prenom"] = "Julie"
 
-print(dictionnary)
+print(d)
 
 # Ajouter ou supprimer une clé
-dictionnary["age"] = 30
-print(dictionnary)
+d["age"] = 30
+print(d)
 
-if "age" in dictionnary:
-  del dictionnary["age"]
+if "age" in d:
+  del d["age"]
 
 # Boucler dans un dictionnaire
-for x in dictionnary.values():
+for x in d.values():
   print(x)
 
 # Obtenir les clés
-dictionnary.keys()
+d.keys()
 # Obtenir les valeurs
-dictionnary.values()
+d.values()
 

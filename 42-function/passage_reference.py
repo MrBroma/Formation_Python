@@ -4,5 +4,3 @@ def foo(param):
 var = 5
 print(id(var))
 foo(param=var)
-
- 

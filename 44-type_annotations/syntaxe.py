@@ -4,3 +4,4 @@ def add(a:int, b:int) -> int:
 add(2, 2)
 
 # use mypy syntaxe.py --> problem of syntaxes
+

@@ -2,6 +2,7 @@ d = {"prenom": "Paul",
 "profession": "ingénieur"}
 
 
+
 key = d.get("prenom", "La clé prénom n'existe pas")
 print(key)
 

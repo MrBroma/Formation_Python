@@ -11,6 +11,6 @@ with open("data.json", "w") as f:
 # if we use f.read()
 # use f.seek(0) to return at the start
 
-# error
+# errors
 # Pèche
 # in python file --> json.dump("Pèche", f, ensure_ascii=False)

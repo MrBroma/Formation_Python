@@ -1,0 +1,5 @@
+2022-09-18 16:34:31,443 - DEBUG - La fonction a bien été exécutée
+2022-09-18 16:34:31,443 - INFO - Message d'information général
+2022-09-18 16:34:31,443 - WARNING - Attention !
+2022-09-18 16:34:31,443 - ERROR - Une erreur est arrivée
+2022-09-18 16:34:31,443 - CRITICAL - Erreur critique

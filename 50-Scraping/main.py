@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 
 id_artist = int(input("Enter the id of the artist to scrape: "))
+# test avec Patrick Bruel : 29743
 
 
 def is_valid(word):
@@ -23,7 +24,7 @@ def extract_lyrics(url):
     all_words = []
     for tag in soup.find_all("div", class_="Lyrics__Container-sc-1ynbvzw-6 YYrds"):
         for sentence in tag.stripped_strings:
-            sentence_words = [word.strip(",").strip(".").strip("c'").strip("qu'").strip("l'").strip(".").lower() for word in sentence.split() if is_valid(word)]
+            sentence_words = [word.strip(",").strip(".").strip("c'").strip("l'").strip("d'").strip(".").lower() for word in sentence.split() if is_valid(word)]
             all_words.extend(sentence_words)
     return all_words
 
@@ -54,11 +55,17 @@ def get_all_words():
     for url in urls:
         lyrics = extract_lyrics(url=url)
         words.extend(lyrics)
-    print(len(words))
 
+    # with open("data-patrick-bruel.json", "w") as f:
+    #     json.dump(words, f, indent=4)
+
+    # with open("data.json", "r") as f:
+    #     words = json.load(f)
+
+    # print(len(words))
     # pprint(words)
 
-    counter = collections.Counter([w for w in words if len(w) > 4])
+    counter = collections.Counter([w for w in words if len(w) > 5])
     most_common_words = counter.most_common(10)
     pprint(most_common_words)
 

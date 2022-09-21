@@ -18,6 +18,7 @@ def extract_lyrics(url):
         print("Impossible to fetch the page!!!")
         return []
 
+
     soup = BeautifulSoup(r.content, 'html.parser')
     all_words = []
     for tag in soup.find_all("div", class_="Lyrics__Container-sc-1ynbvzw-6 YYrds"):

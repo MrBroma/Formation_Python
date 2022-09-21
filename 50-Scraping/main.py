@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 
 id_artist = int(input("Enter the id of the artist to scrape: "))
 # test avec Patrick Bruel : 29743
+# test avec Michel Sardou : 41749
 
 
 def is_valid(word):
@@ -18,7 +19,6 @@ def extract_lyrics(url):
     if r.status_code != 200:
         print("Impossible to fetch the page!!!")
         return []
-
 
     soup = BeautifulSoup(r.content, 'html.parser')
     all_words = []
